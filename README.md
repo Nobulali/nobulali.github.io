@@ -1,2 +1,2 @@
-# nobulali.github.io
-CNIT 133 Homework
+# CNIT_133
+Homework for CNIT 133
