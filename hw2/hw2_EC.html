@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Extra Credit</title>
+  <meta name="description" content="Homework 2 for JavaScript, jQuery, AJAX course at CCSF">
+  <link rel="stylesheet" href="../style.css">
+  <script type="text/javascript" src="../scripts/side_nav.js"></script>
+  <style>
+  table, td {
+    background-color: white;
+    border: 1px solid black;
+    table-layout: auto;
+ }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $("button").click(function(){
+      $("p").toggle();
+    });
+  });
+  </script>
+</head>
+
+<body>
+  <table id="myTable">
+    <tr>
+      <td align="center" colspan="3">Monetary Exchange Rates</td>
+    </tr>
+    <tr>
+      <td>Currency</td>
+      <td>Rate</td>
+      <td>Value</td>
+    </tr>
+      <td>Euro</td>
+      <td>0.84</td>
+      <td>8.40</td>
+    </tr>
+    <tr>
+      <td>Canadian Dollar</td>
+      <td>1.23</td>
+      <td>12.30</td>
+    </tr>
+    <tr>
+      <td>Hong Kong Dollar</td>
+      <td>7.76</td>
+      <td>77.60</td>
+    </tr>
+    <td>Japanese Yenr</td>
+    <td>110.80</td>
+    <td>1108.00</td>
+  </tr>
+  <td>Mexican Peso</td>
+  <td>19.82</td>
+  <td><textarea type="float" name="pesos" style="width: 30px; height: 20px; border: none; resize: none" readonly value></textarea> </td>
+</tr>
+<td align="center" colspan="2">Enter Amount of U.S. Dollars</td>
+<td><input type="float" name="dollars" id="dollars" size="5" style="border: none"></td>
+</tr>
+  </table>
+  
+ <div><a href="../hw2.html" style="color: white">Back to Homework 2</a></div>
+</body>
+
+</html>
