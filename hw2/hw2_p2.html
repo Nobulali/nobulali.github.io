@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Part 2</title>
+  <meta name="description" content="Homework 2 for JavaScript, jQuery, AJAX course at CCSF">
+  <link rel="stylesheet" href="../style.css">
+  <script type="text/javascript" src="../scripts/side_nav.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("button").click(function () {
+        // get our inputs
+        num1 = parseInt($('#num1').val());
+        num2 = parseInt($('#num2').val());
+        num3 = parseInt($('#num3').val());
+        // calculate our results
+        sum = num1 + num2 + num3;
+        avg = sum / 3;
+        product = num1 * num2 * num3;
+        min = Math.min(num1, num2, num3);
+        max = Math.max(num1, num2, num3);
+        // check for errors
+        if (isNaN(sum)) {
+          $("#results").val("Please enter in valid numbers!");
+        } else {
+          // we have valid results so build the output string
+          var results = "Sum: " + sum + "\nAverage: " + avg + "\nProduct: " + product;
+          results += "\nSmallest: " + min + "\nLargest: " + max;
+          $("#results").val(results);
+        }
+        $("#results").fadeTo("slow", 1);
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div id="main">
+    <div class="NavBar">
+      <h1 class="Header">Part 2</h1>
+      <a class="OpenSideNav" onclick="openSideNav()">&#9776;</a>
+      <a class="active" href="../hw1.html">Home</a>
+    </div>
+  </div>
+  <div id="SideNav" class="SideBar">
+    <a href="javascript:void(0)" class="closeSideNav" onclick="closeSideNav()">&times;</a>
+    <a href="../hw2.html">Homework 2</a>
+    <a href="../hw3.html">Homework 3</a>
+    <a href="../hw4.html">Homework 4</a>
+    <a href="../hw5.html">Homework 5</a>
+    <a href="../hw6.html">Homework 6</a>
+    <a href="../hw7.html">Homework 7</a>
+    <a href="../hw8.html">Homework 8</a>
+  </div>
+  <section class="body">
+
+    <form name="myform">
+      <table>
+        <tr>
+          <td><label for="num1">First Number:</label></td>
+          <td><input type="text" name="num1" id="num1" size="10"></td>
+        </tr>
+
+        <tr>
+          <td><label for="num2">Second Number:</label></td>
+          <td><input type="text" name="num2" id="num2" size="10"></td>
+        </tr>
+
+        <tr>
+          <td><label for="num2">Third Number:</label></td>
+          <td><input type="text" name="num3" id="num3" size="10"></td>
+        </tr>
+      </table>
+      <br><br>
+
+      <button type="button">Calculate</button><br><br>
+      <textarea type="text" name="results" id="results" rows="5" style="background-color:light-grey; opacity: 0.0;"
+        readonly value></textarea>
+    </form>
+  </section>
+
+  <div><a href="../hw2.html" style="color: white">Back to Homework 2</a></div>
+</body>
+
+</html>
